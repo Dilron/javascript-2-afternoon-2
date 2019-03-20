@@ -226,7 +226,13 @@ function addItem(myGroceryList, addIn){
 */
 
 //Code Here
-
+function maker(){
+  let newBigArr = []
+  for(let i = 1; i <= 215; i++){
+    newBigArr.push(i)
+  }
+  return newBigArr
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -242,7 +248,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
+function addTen(numbers){
+  let addedTen = []
+  for(let i = 0; i < numbers.length; i++){
+    addedTen.push(Number(numbers[i]) + 10) 
+  }
+  return addedTen
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -267,7 +279,13 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1, arr2){
+  if(arr1.length > arr2.length){
+    return arr1
+  } else {
+    return arr2
+  }
+}
 
 
 /*
@@ -279,7 +297,17 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function both(arr1, arr2){
+  let newArray = []
+  for(let i = 0; i < arr1.length; i++){
+    for(let o = 0; o < arr2.length; o++){
+      if(arr1[i] === arr2[o]){
+        newArray.push(arr2[o])
+      }
+    }
+  }
+  return newArray
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -319,7 +347,9 @@ var colt = {
 */
 
 //Code Here
+devMountainEmployees.push(tyler, cahlan, ryan, colt)
 
+console.log(devMountainEmployees.length)
 
 
 /*
@@ -328,7 +358,16 @@ var colt = {
 */
 
 //Code Here
+function devTerminate(devMountain, name){
+  for(let i = 0; i < devMountain.length; i++){
+    if(devMountain[i] === name){
+      devMountain.splice(i, 1)
+    }
+  }
+  return devMountain
+}
 
+devTerminate(devMountainEmployees, cahlan)
 
 
 ////////// PROBLEM 13 //////////
@@ -340,7 +379,7 @@ var colt = {
 */
 
 //Code Here
-
+let users = []
 
 
 /*
@@ -359,8 +398,28 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+var user2 = {
+  name: 'Dillon',
+  email: 'dillonokelle@gmail.com',
+  password: 'password1',
+  username: 'other'
+}
 
+var user3 = {
+  name: 'New guy',
+  email: 'newguysmail@some.com',
+  password: 'dudeword',
+  username: 'guydude'
+}
 
+var user4 = {
+  name: 'other dude',
+  email: 'hisothermail@another.com',
+  password: 'hisword',
+  username: 'othername'
+}
+
+users.push(user1, user2, user3, user4)
 
 /*
   Now you have a very common data structure. 
@@ -373,8 +432,16 @@ var user1 = {
 */
 
 //Code Here
+function tylerBGone(arr, mail){
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i].email === mail){
+      arr.splice(i, 1)
+    }
+  }
+  return arr
+}
 
-
+tylerBGone(users, 'tylermcginnis33@gmail.com')
 
 /*
   The activity we just did is very much how data works in 'the real world'.
