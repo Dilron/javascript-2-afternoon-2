@@ -127,7 +127,6 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 //Code Here
 function divider(numbersArray){
-  //let completeDivide = []
   let dividedEve = []
   let dividedOd = []
   for (let i = 0; i < numbersArray.length; i++){
@@ -138,8 +137,6 @@ function divider(numbersArray){
   }
   }
   let completeDivide = [dividedEve, dividedOd]
-  //completeDivide.unshift(dividedEve)
-  //completeDivide.push(dividedOd)
   return completeDivide
 }
 
@@ -163,7 +160,15 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
+function finder(anArray){
+  let rand = getRandomArbitrary()
+  for(let i = 0; i < anArray.length; i++){
+    if(anArray[i] === rand){
+      return true
+    }
+  }
+  return false
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -192,9 +197,28 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(myGroceryList, takeOut){
+  let fail = []
+  if(myGroceryList && takeOut){
+  for(var i = myGroceryList.length - 1; i >= 0; i--){
+    if(myGroceryList[i] === takeOut){
+      myGroceryList.splice([i], [1])
+    }
+  }
+  return myGroceryList
+}
+return fail
+}
 
 
-
+function addItem(myGroceryList, addIn){
+  let fail = []
+  if(myGroceryList && addIn){
+    myGroceryList.push(addIn)
+    return myGroceryList
+  }
+  return fail
+}
 ////////// PROBLEM 9 //////////
 
 /*
